@@ -1,10 +1,13 @@
 import Header from "./components/Header/Header"
+import Container from "./components/UI/Container/Container"
 
 function App() {
 
   return (
     <>
-<Header />
+    <Container>
+      <Header />
+    </Container>
     </>
   )
 }

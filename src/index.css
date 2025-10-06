@@ -10,3 +10,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
+h1, p {
+  text-shadow: 5px 5px 10px #8b8aa7b7;
+}

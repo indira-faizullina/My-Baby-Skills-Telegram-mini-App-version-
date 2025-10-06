@@ -1,0 +1,10 @@
+.container {
+  width: 98%;
+  height: 100vh;
+  max-width: 900px;
+  min-width: 270px;
+  margin: 5px auto;
+  background-color: #f9f9f5;
+  border: 1px solid #b5b4d1b7;
+  border-radius: 5px;
+}
