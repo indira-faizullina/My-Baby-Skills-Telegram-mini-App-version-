@@ -1,0 +1,12 @@
+.card {
+  width: 90%;
+  margin: 10px auto 20px;
+  padding: 20px;
+  border: 1px solid #b5b4d1;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #8b8aa7b7;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

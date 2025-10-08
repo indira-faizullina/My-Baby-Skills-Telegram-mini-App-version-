@@ -20,9 +20,9 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    border: solid 1px #bc91b869;
+    border: solid 1px #dfc5e8;
     border-radius: 50%;
-    box-shadow: 4px 4px 15px #8b8aa7b7;
+    box-shadow: 4px 4px 15px #d1b9da;
 }
 
 .infoContainer {
@@ -32,4 +32,34 @@
     align-content: center;
     color: #bc91b8;
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    height: 180px;
+  }
+
+  .photoContainer {
+    width: 180px;
+  }
+
+  .infoContainer {
+    width: 60%;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    height: 150px;
+  }
+
+  .photoContainer {
+    width: 150px;
+  }
+
+  .infoContainer {
+    width: 60%;
+    font-size: 1.2rem;
+  }
 }
