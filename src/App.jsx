@@ -6,7 +6,12 @@ import { useState } from "react"
 
 function App() {
 
-  const [skills, setSkills] = useState([])
+  const [skills, setSkills] = useState([{
+            id: 1,
+            date: '07.07.2025',
+            title: 'Первая улыбка',
+        }
+    ])
 
   return (
     <>

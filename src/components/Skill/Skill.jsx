@@ -7,7 +7,7 @@ import showIcon from '../../assets/show.png'
 export default function Skill( {skills, skill, setSkills} ) {
 
     const deleteItem = () => {
-        setSkills(skills.filter((item, i) => skill.id !== item.id))
+        setSkills(skills.filter((item) => item.id !== skill.id))
     }
 
     return(
