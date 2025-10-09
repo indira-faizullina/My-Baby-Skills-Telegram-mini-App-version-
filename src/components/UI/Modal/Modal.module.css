@@ -1,0 +1,10 @@
+.dialog {
+    width: 90%;
+    max-width: 700px;
+    min-width: 270px;
+    margin: auto auto;
+    padding: 30px 40px 20px;
+    border: 3px solid #b5b4d1;
+    border-radius: 10px;
+    justify-content: center;
+}
