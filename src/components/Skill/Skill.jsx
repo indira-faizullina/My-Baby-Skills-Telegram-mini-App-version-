@@ -1,16 +1,18 @@
 import ButtonIcon from '../UI/ButtonIcon/ButtonIcon'
+import Button from '../UI/Button/Button'
 import styles from './Skill.module.css'
 import deleteIcon from '../../assets/delete.png'
 import updateIcon from '../../assets/update.png'
 import showIcon from '../../assets/show.png'
 import close from '../../assets/close.png'
 import Modal from '../UI/Modal/Modal'
-import Form from '../UI/Form/Form'
 import { useState } from 'react'
 
 export default function Skill( {skills, skill, setSkills} ) {
 
     const [hasModal, setHasModal] = useState(false)
+    const [inputValue, setInputValue] = useState(skill.title)
+    const [dateValue, setDateValue] = useState(skill.date)
 
     const deleteItem = () => {
         setSkills(skills.filter((item) => item.id !== skill.id))
@@ -20,7 +22,31 @@ export default function Skill( {skills, skill, setSkills} ) {
         setHasModal(true)
     }
 
-    const closeModal = () => setHasModal(false)
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value)
+    }
+
+    const handleDateChange = (event) => {
+        setDateValue(event.target.value)
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        skills.map(item => {
+            if (skill.id === item.id) {
+                skill.title = inputValue
+                skill.date = dateValue
+            }
+        })
+        setSkills(skills)
+        setHasModal(false)
+    }
+
+    const closeModal = () => {
+        setHasModal(false)
+        setInputValue(skill.title)
+        setDateValue(skill.date)
+    }
 
     return(
         <>
@@ -36,7 +62,14 @@ export default function Skill( {skills, skill, setSkills} ) {
                     <ButtonIcon onClick={closeModal}><img src={close} alt="закрыть" className={styles.closeButton}/></ButtonIcon>
                 </div>
                 <div className={styles.modalBody}>
-                    <Form skills={skills} setSkills={setSkills}/>
+                    <form onSubmit={handleSubmit} className={styles.form}>
+                        <input type="text" placeholder="введите новую умелку" className={styles.input} value={inputValue} onChange={handleInputChange}/>
+                        <input type="date" name="date" id="date" className={styles.inputDate} value={dateValue} onChange={handleDateChange}/>
+                    <div className={styles.buttonWrapper}>
+                        <Button>СОХРАНИТЬ</Button>
+                    </div>
+
+                    </form>
                 </div>
             </Modal>
         </>
