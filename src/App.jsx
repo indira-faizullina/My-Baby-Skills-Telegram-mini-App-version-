@@ -8,7 +8,7 @@ function App() {
 
   const [skills, setSkills] = useState([{
             id: 1,
-            date: '07.07.2025',
+            date: '2025-07-07',
             title: 'Первая улыбка',
         }
     ])
