@@ -1,7 +1,6 @@
 export function ageCounter(date) {
     const now = new Date()
     const birthday = new Date(date)
-    const ageInSeconds = (now - birthday) / 1000
 
     if(birthday > now) {
         console.log('похоже, ребенок ещё не родился...')
