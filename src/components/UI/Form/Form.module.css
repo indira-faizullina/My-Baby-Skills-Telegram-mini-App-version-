@@ -1,20 +1,3 @@
-.form {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    color: #111;
-}
-
-.input, .date {
-    width: 100%;
-    padding: 5px 20px;
-    margin-bottom: 10px;
-    border: 1px solid #9ddb7eff;
-    border-radius: 10px;
-    outline: none;
-}
-
 .date {
    width: 50%; 
 }

@@ -46,8 +46,8 @@ export default function Form({skills, setSkills}) {
     }
 
     return(
-            <form onSubmit={handleSubmit} className={styles.form}>
-                <input type="text" placeholder="введите новую умелку" className={styles.input} value={inputValue} onChange={handleInputChange}/>
+            <form onSubmit={handleSubmit}>
+                <input type="text" placeholder="введите новую умелку" value={inputValue} onChange={handleInputChange}/>
                 <input type="date" name="date" id="date" className={styles.date} value={dateValue} onChange={handleDateChange}/>
                 {hasError ? <p style={{color: "red"}}>{errorMessage}</p> : null}
                 <Button>ДОБАВИТЬ</Button>
